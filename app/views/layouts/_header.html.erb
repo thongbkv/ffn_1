@@ -6,7 +6,9 @@
     <ul class="navbar navbar-right">
       <li><%= link_to t("static_pages.login"), "#" %></li>
       <li><%= link_to t("static_pages.signup"), "#" %></li>
+      <li><%= link_to t("static_pages.logout"),
+        destroy_user_session_path, method: :delete %>
+      </li>
     </ul>
   </div>
 </nav>
-
