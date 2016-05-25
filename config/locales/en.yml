@@ -20,4 +20,8 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  static_pages:
+    home: "Home"
+    title: "Fr@mgi@ Football News"
+    login: "Login"
+    signup: "Sign Up"
