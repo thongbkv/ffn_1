@@ -1,0 +1,17 @@
+ <%= form_for [:admin, @team] do |f| %>
+  <%= render "shared/error_messages", object: @team %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name, class: "form-control" %>
+
+  <%= f.label :logo %>
+  <%= f.file_field :logo, accept: "image/jpeg, image/gif, image/png" %>
+
+  <%= f.label :coach %>
+  <%= f.text_field :coach, class: "form-control" %>
+
+  <%= f.label :country %>
+  <%= f.text_field :country, class: "form-control" %>
+
+  <%= f.submit t("admin.team.create_team"), class: "btn btn-info form-button" %>
+<% end %>

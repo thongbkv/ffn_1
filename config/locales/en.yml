@@ -28,6 +28,23 @@ en:
     logout: "Logout"
     matches: "Matches"
   admin:
+    team:
+      create_success: "Created a team success!"
+      team: "Manage Team"
+      new: "Create a Football team"
+      create_team: "Create team"
+      name: "Name"
+      logo: "Logo"
+      coach: "Coach"
+      country: "Country"
+      delete: "Delete"
+      edit: "Edit"
+      delete_success: "Deleted!"
+      delete_error: "Error delete!"
+      update_success: "Updated success!"
+      update_error: "Update Error!"
+      team_edit: "Update Football Team"
+      delete_message: "Are you sure?"
     season:
       create_success: "Create Season Success!"
       create_season : "Create Season"
@@ -68,7 +85,7 @@ en:
       list_match: "List matches"
     player:
       create_player: "Create Player"
-      player_name: "Player"  
+      player_name: "Player"
       name: "Name"
       date_of_birth: "Date Of Birth"
       position: "Position"
@@ -87,3 +104,11 @@ en:
   shared:
     form: "The form contains"
     error: "Error!"
+    home: "Home"
+    title: "Fr@mgi@ Football News"
+    login: "Login"
+    signup: "Sign Up"
+  view:
+    shared:
+      error: "Error!"
+      form: "The form contains"
