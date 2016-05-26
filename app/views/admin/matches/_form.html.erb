@@ -8,6 +8,10 @@
       options_for_select(@teams.collect {|team| [team.name, team.id]},
       selected: team_match_builder.object.team_id),
       {}, {class: "form-control", id: "team_#{i += 1}"} %>
+    <div class="panel-heading border-from">
+      <span class="panel-title"><%= t "admin.match.rate" %></span>
+      <%= render "team_matches", f: team_match_builder %>
+    </div>
   <% end %>
 
   <%= f.hidden_field :name %>
