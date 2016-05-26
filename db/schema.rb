@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160526022154) do
+ActiveRecord::Schema.define(version: 20160525084520) do
 
   create_table "bets", force: :cascade do |t|
     t.integer  "status"
@@ -55,7 +55,6 @@ ActiveRecord::Schema.define(version: 20160526022154) do
     t.string   "position"
     t.integer  "jersey_number"
     t.string   "nationality"
-    t.string   "club"
     t.integer  "team_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
@@ -140,6 +139,7 @@ ActiveRecord::Schema.define(version: 20160526022154) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.integer  "role",                   default: 0
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
   end
