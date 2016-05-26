@@ -25,3 +25,29 @@ en:
     title: "Fr@mgi@ Football News"
     login: "Login"
     signup: "Sign Up"
+    logout: "Logout"
+    matches: "Matches"
+  admin:
+    match:
+      name: "Name"
+      description: "Description"
+      startDate: "Start Date"
+      hour: "Hour"
+      stadium: "Stadium"
+      delete: "Delete"
+      delete_message: "Delete success.!"
+      create_success: "Create success.!"
+      update_success: "Update success.!"
+      update_error: "Update error.!"
+      delete_message: "Delete match success.!"
+      delete_error: "Delete success.!"
+      match: "Match"
+      match_edit: "Edit match"
+      create_match: "Create match"
+
+    new_match: "New match"
+    list_match: "List matches"
+  view:
+  shared:
+     error: "Error!"
+     form: "The form contains"

@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="col-md-10 col-offset-2">
+    <h2><%= t "admin.list_match" %></h2>
+    <p class="pull-right label label-info"><%= link_to t("admin.new_match"),
+      new_admin_match_path %></p>
+    <table class="table table-striped table-hover table-style">
+      <thead>
+        <th class="th-style"><p><%= t "admin.match.name" %></p></th>
+        <th class="th-style"><p><%= t "admin.match.description" %></p></th>
+        <th class="th-style"><p><%= t "admin.match.startDate" %></p></th>
+        <th class="th-style"><p><%= t "admin.match.hour" %></p></th>
+        <th class="th-style"><p><%= t "admin.match.stadium" %></p></th>
+        <th class="th-style"><p><%= t "admin.match.season" %></p></th>
+        <th></th>
+        <th></th>
+      </thead>
+      <tbody>
+        <% @matches.each do |match| %>
+          <tr>
+            <td class="td_style"><%= link_to match.name, admin_match_path(match) %></td>
+            <td class="td_style"><%= match.description %></td>
+            <td class="td_style"><%= match.start_date %></td>
+            <td class="td_style"><%= match.hour %></td>
+            <td class="td_style"><%= match.stadium %></td>
+            <td class="td_style"><%= match.season.name %></td>
+            <td class="td_style"><%= link_to t("admin.match.delete"), admin_match_path(match),
+              method: :delete, data: {confirm: t("admin.match.delete_message")} %>
+            </td>
+            <td><%= link_to t("admin.match.edit"), edit_admin_match_path(match) %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

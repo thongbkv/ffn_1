@@ -3,11 +3,11 @@
   <head>
     <title><%= full_title yield :title %></title>
     <%= stylesheet_link_tag "application", media: "all",
-      "data-turbolinks-track": true %>
-    <%= javascript_include_tag "application", "data-turbolinks-track": true %>
+      "data-turbolinks-track": false %>
+    <%= javascript_include_tag "application", "data-turbolinks-track": false %>
     <%= csrf_meta_tags %>
   </head>
-  <body>
+  <body data-no-turbolink>
     <%= render "layouts/header" %>
     <div class="container">
       <% flash.each do |message_type, message| %>

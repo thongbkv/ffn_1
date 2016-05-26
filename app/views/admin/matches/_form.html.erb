@@ -1,0 +1,22 @@
+<%= form_for [:admin, @match] do |f| %>
+  <%= render "shared/error_messages", object: @match %>
+ 
+  <%= f.label :name %>
+  <%= f.text_field :name, class: "form-control" %>
+ 
+  <%= f.label :description %>
+  <%= f.text_field :description, class:"form-control" %>
+ 
+  <%= f.label :start_date %>
+  <%= f.text_field :start_date, class: "form-control" %>
+ 
+  <%= f.label :hour %>
+  <%= f.text_field :hour, class: "form-control" %>
+
+  <%= f.label :stadium %>
+  <%= f.text_field :stadium, class: "form-control" %>
+
+  <%= f.select :season_id, Season.all.collect {|p| [ p.name, p.id ] } %>
+ 
+  <%= f.submit t("admin.match.create_match"), class: "btn btn-info form-button" %>
+<% end %>
