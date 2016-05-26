@@ -6,7 +6,6 @@ class CreatePlayers < ActiveRecord::Migration
       t.string :position
       t.integer :jersey_number
       t.string :nationality
-      t.string :club
       
       t.references :team, index: true, foreign_key: true
 
