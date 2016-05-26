@@ -17,7 +17,7 @@
       <tbody>
         <% @matches.each do |match| %>
           <tr>
-            <td class="td_style"><%= link_to match.name, admin_match_path(match) %></td>
+            <td class="td_style"><%= match.name %></td>
             <td class="td_style"><%= match.description %></td>
             <td class="td_style"><%= match.start_date %></td>
             <td class="td_style"><%= match.hour %></td>

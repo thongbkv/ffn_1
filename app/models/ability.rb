@@ -8,6 +8,7 @@ class Ability
     else
       can :read, :all
       can [:create, :update, :destroy], Comment, user_id: user.id
+      can [:create, :update], Bet
     end
   end
     #
