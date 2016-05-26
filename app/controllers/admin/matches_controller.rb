@@ -1,11 +1,16 @@
 class Admin::MatchesController < ApplicationController
   load_and_authorize_resource
   before_action :load_seasons, except: [:index, :destroy]
-
+  before_action :load_teams, except: [:index, :destroy]
+  before_action :load_team_matches
+  
   def index
   end
 
   def new
+    2.times do
+      @match.team_matches.build
+    end
   end
 
   def edit
@@ -43,10 +48,18 @@ class Admin::MatchesController < ApplicationController
   private
   def match_params
     params.require(:match).permit :name, :description, :start_date,
-      :hour, :stadium, :season_id
+      :hour, :stadium, :season_id, team_matches_attributes: [:id, :team_id]
   end
 
   def load_seasons
     @seasons = Season.all
+  end
+
+  def load_teams
+    @teams = Team.all
+  end
+
+  def load_team_matches
+    @team_matches = TeamMatch.all
   end
 end
