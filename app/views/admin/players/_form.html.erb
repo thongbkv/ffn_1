@@ -1,0 +1,22 @@
+<%= form_for [:admin, @player] do |f| %>
+  <%= render "shared/error_messages", object: @player %>
+  
+  <%= f.label :name %>
+  <%= f.text_field :name, class: "form-control" %>
+
+  <%= f.label :date_of_birth %>
+  <%= f.text_field :date_of_birth, class: "form-control" %>
+
+  <%= f.label :position %>
+  <%= f.text_field :position, class: "form-control" %>
+
+  <%= f.label :jersey_number %>
+  <%= f.text_field :jersey_number, class: "form-control" %>
+
+  <%= f.label :nationality %>
+  <%= f.text_field :nationality, class: "form-control" %>
+
+  <%= f.select :team_id, @teams.collect {|team| [ team.name, team.id ]} %>
+
+  <%= f.submit class: "btn btn-primary" %>
+<% end %>

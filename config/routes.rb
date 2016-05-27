@@ -7,5 +7,6 @@ Rails.application.routes.draw do
     root "season#index"
     resources :seasons
     resources :matches
+    resources :players
   end
 end
