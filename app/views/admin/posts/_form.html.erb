@@ -1,0 +1,17 @@
+<%= form_for [:admin, @post] do |f| %>
+
+  <%= f.label :title %>
+  <%= f.text_field :title, class: "form-control" %>
+
+  <%= f.label :content %>
+  <%= f.text_field :content, class: "form-control" %>
+
+  <%= f.label :image %>
+  <%= f.text_field :image, class: "form-control" %>
+
+  <%= f.select :season_id, @seasons.collect {|season| [ season.name, season.id ]} %><br />
+
+  <%= f.select :match_id, @matches.collect {|match| [ match.name, match.id ]} %>
+
+  <%= f.submit class: "btn btn-primary" %>
+<% end %>

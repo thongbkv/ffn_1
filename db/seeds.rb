@@ -51,3 +51,7 @@ Team.create name: "Liverpol", logo: "", coach: "Zidan", country: "Phap"
 User.create email: "admin@example.com", password: "12345678", password_confirmation: "12345678", role: :admin
 User.create email: "user2@example.com", password: "12345678", password_confirmation: "12345678"
 User.create email: "user3@example.com", password: "12345678", password_confirmation: "12345678"
+
+Post.create title: "Post - 1", content: "Content - 1", image: "", season_id: 1, match_id: 1
+Post.create title: "Post - 2", content: "Content - 2", image: "", season_id: 2, match_id: 2
+Post.create title: "Post - 3", content: "Content - 3", image: "", season_id: 3, match_id: 3

@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   get "static_pages/help"
 
   namespace :admin do
-    root "season#index"
+    root "posts#index"
     resources :seasons
+    resources :posts
+    resources :matches
   end
 end
