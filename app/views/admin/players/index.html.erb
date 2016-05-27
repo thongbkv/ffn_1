@@ -1,6 +1,8 @@
 <div class="row">
   <div class="col-md-10 col-offset-2">
     <h2><%= t "admin.player.list_player" %></h2>
+    <p class="pull-right label label-info"><%= link_to t("admin.player.new_player"),
+      new_admin_player_path %></p>
     <table class="table table-striped table-hover">
       <thead>
         <th><%= t "admin.player.name" %></th>
@@ -21,24 +23,13 @@
             <td><%= player.jersey_number %></td>
             <td><%= player.nationality %></td>
             <td><%= player.team.name %></td>
-            <td>
-              <%= link_to [:edit, :admin, player], class: "btn btn-primary btn-xs" do %>
-                <span class="glyphicon glyphicon-eye-open"></span> 
-                <%= t "admin.player.edit_player" %>
-              <% end %>
-            </td>
-            <td>
-              <%= link_to [:admin, player], method: :delete, data: {confirm: t("admin.player.sure")},
-                class: "btn btn-primary btn-xs" do %>
-                <span class="glyphicon glyphicon-eye-open"></span> <%= t "admin.player.destroy" %>
-              <% end %>
+            <td><%= link_to t("admin.player.edit_player"), edit_admin_player_path(player) %></td>
+            <td class="td_style"><%= link_to t("admin.player.destroy"), admin_player_path(player),
+              method: :delete, data: {confirm: t("admin.player.sure")} %>
             </td>
           </tr>
         <% end %>
       </tbody>
     </table>
-    <%= link_to new_admin_player_path, class: "btn btn-primary btn-xs" do %>
-      <span class="glyphicon glyphicon-eye-open"></span> <%= t "admin.player.new_player" %>
-    <% end %>
   </div>
 </div>

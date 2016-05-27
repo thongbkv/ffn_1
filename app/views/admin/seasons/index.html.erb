@@ -1,6 +1,8 @@
 <div class="row">
   <div class="col-md-10 col-offset-2">
     <h2><%= t "admin.season.list_season" %></h2>
+    <p class="pull-right label label-info"><%= link_to t("admin.season.new_season"),
+      new_admin_season_path %></p>
     <table class="table table-striped table-hover">
       <thead>
         <th><%= t "admin.season.name" %></th>
@@ -17,24 +19,13 @@
             <td><%= season.description %></td>
             <td><%= season.season_teams.count %></td>
             <td><%= season.matches.count %></td>
-            <td>
-              <%= link_to [:edit, :admin, season], class: "btn btn-primary btn-xs" do %>
-                <span class="glyphicon glyphicon-eye-open"></span> 
-                <%= t "admin.season.edit_season" %>
-              <% end %>
-            </td>
-            <td>
-              <%= link_to [:admin, season], method: :delete, data: {confirm: t("admin.season.sure")},
-                class: "btn btn-primary btn-xs" do %>
-                <span class="glyphicon glyphicon-eye-open"></span> <%= t "admin.season.destroy" %>
-              <% end %>
+            <td><%= link_to t("admin.season.edit_season"), edit_admin_season_path(season) %></td>
+            <td class="td_style"><%= link_to t("admin.season.destroy"), admin_season_path(season),
+              method: :delete, data: {confirm: t("admin.season.sure")} %>
             </td>
           </tr>
         <% end %>
       </tbody>
     </table>
-    <%= link_to new_admin_season_path, class: "btn btn-primary btn-xs" do %>
-      <span class="glyphicon glyphicon-eye-open"></span> <%= t "admin.season.new_season" %>
-    <% end %>
   </div>
 </div>

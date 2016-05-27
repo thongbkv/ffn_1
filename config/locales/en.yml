@@ -117,6 +117,14 @@ en:
       match: "Match"
       new_post: "New Post"
       edit: "Edit post"
+    user:
+      list_user: "List User"
+      sure: "Are you sure?"
+      destroy_user: "Delete User"
+      destroy_success: "Delete User Success!"
+      user_name: "User"
+      email: "Email"
+      delete: "Delete"
   shared:
     form: "The form contains"
     error: "Error!"
