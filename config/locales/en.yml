@@ -25,6 +25,8 @@ en:
     title  : "Fr@mgi@ Football News"
     login  : "Login"
     signup : "Sign Up"
+    logout: "Logout"
+    matches: "Matches"
   admin:
     season:
       create_success: "Create Season Success!"
@@ -45,6 +47,26 @@ en:
       delete_season_success: "Delete Season Success!"
       edit_season : "Edit Season"
       update_season : "Update Season"
+    match:
+      name: "Name"
+      description: "Description"
+      startDate: "Start Date"
+      hour: "Hour"
+      stadium: "Stadium"
+      delete: "Delete"
+      create_success: "Create success.!"
+      update_success: "Update success.!"
+      update_error: "Update error.!"
+      delete_message: "Delete match success.!"
+      delete_error: "Delete success.!"
+      match: "Match"
+      match_edit: "Edit match"
+      create_match: "Create match"
+      update_match: "Update match"
+      edit: "Edit"
+
+    new_match: "New match"
+    list_match: "List matches"
   shared:
-    form : "Form"
-    error: "Error"
+    form: "The form contains"
+    error: "Error!"

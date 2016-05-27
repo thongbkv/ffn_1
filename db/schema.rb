@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160526022154) do
+ActiveRecord::Schema.define(version: 20160525084520) do
 
   create_table "bets", force: :cascade do |t|
     t.integer  "status"

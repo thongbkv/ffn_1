@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   namespace :admin do
     root "season#index"
     resources :seasons
+    resources :matches
   end
 end
