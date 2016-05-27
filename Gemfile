@@ -18,6 +18,9 @@ gem "jbuilder", "2.2.3"
 gem "sdoc", "0.4.0", group: :doc
 gem "devise"
 gem "cancancan", "~> 1.10"
+gem "omniauth"
+gem "omniauth-google-oauth2" 
+gem "omniauth-facebook"
 group :development, :test do
   gem "sqlite3", "1.3.9"
   gem "byebug", "3.4.0"
