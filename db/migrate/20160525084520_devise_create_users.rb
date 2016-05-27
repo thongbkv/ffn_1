@@ -21,6 +21,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.integer :role, default: 0
       t.string  :provider
       t.string  :uid
+
       ## Confirmable
       # t.string   :confirmation_token
       # t.datetime :confirmed_at
