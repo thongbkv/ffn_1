@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-md-10 col-offset-2">
+    <h2><%= t "admin.list_team" %></h2>
+    <p class="pull-right label label-info"><%= link_to t("admin.post.new_post"),
+      new_admin_post_path %></p>
+    <table class="table table-striped table-hover table-style">
+      <thead>
+        <th class="th-style"><p><%= t "admin.post.title" %></p></th>
+        <th class="th-style"><p><%= t "admin.post.content" %></p></th>
+        <th class="th-style"><p><%= t "admin.post.image" %></p></th>
+        <th class="th-style"><p><%= t "admin.post.season" %></p></th>
+        <th class="th-style"><p><%= t "admin.post.match" %></p></th>
+        <th></th>
+        <th></th>
+      </thead>
+      <tbody>
+        <% @posts.each do |post| %>
+          <tr>
+            <td class="td_style"><%= link_to post.title, admin_post_path(post) %></td>
+            <td class="td_style"><%= post.content %></td>
+            <td class="td_style"><%= image_tag post.image.url if post.image? %></td>
+            <td class="td_style"><%= post.season.name %></td>
+            <td class="td_style"><%= post.match.name %></td>
+            <td class="td_style"><%= link_to t("admin.team.delete"), admin_post_path(post),
+              method: :delete, data: {confirm: t("admin.team.delete_message")} %>
+            </td>
+            <td><%= link_to t("admin.team.edit"), edit_admin_post_path(post) %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
