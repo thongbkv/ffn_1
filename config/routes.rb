@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: {omniauth_callbacks: "callbacks"}
-  root "static_pages#home"
+  root "admin_seasons#index"
   get "static_pages/help"
 
   namespace :admin do
-    root "season#index"
     resources :seasons
     resources :matches
     resources :players
+    resources :teams
   end
 end

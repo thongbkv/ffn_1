@@ -4,4 +4,6 @@ class Team < ActiveRecord::Base
   has_many :team_matches
   has_many :matches, through: :team_matches
   has_many :seasons, through: :season_teams
+
+  mount_uploader :logo, LogoUploader
 end
