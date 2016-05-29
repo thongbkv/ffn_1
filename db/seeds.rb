@@ -16,7 +16,15 @@ Comment.create content: "Comment - 3", image: "", posts_id: 1, user_id: 3
 
 Match.create name: "Duc - Phap", description: "Tran chung ket cup C1", start_date: "11/09/2016",
   hour: "10h10", stadium: "My Dinh", season_id: 1
+Match.create name: "Anh - Ha Lan", description: "Tran chung ket cup C1", start_date: "11/09/2016",
+  hour: "15h10", stadium: "My Dinh", season_id: 1
+Match.create name: "Bi - TBN", description: "Tran chung ket cup C1", start_date: "11/09/2016",
+  hour: "17h10", stadium: "My Dinh", season_id: 1
+Match.create name: "Ao - BDN", description: "Tran chung ket cup C1", start_date: "13/09/2016",
+  hour: "17h10", stadium: "My Dinh", season_id: 1
 Match.create name: "Chelse - Asenal", description: "Ngoai hang anh", start_date: "10/02/2016",
+  hour: "22h10", stadium: "My Dinh2", season_id: 2
+Match.create name: "MU - ManCity", description: "Ngoai hang anh", start_date: "10/02/2016",
   hour: "22h10", stadium: "My Dinh2", season_id: 2
 Match.create name: "Man city - Liverpol", description: "Cup FA", start_date: "22/09/2016",
   hour: "23h10", stadium: "My Dinh3", season_id: 3
@@ -41,11 +49,11 @@ Season.create name: "Cup FA", description: "FA - 2015", number_of_team: 12, numb
 Season.create name: "Euro", description: "Euro - 2013", number_of_team: 16, number_of_match: 32
 
 TeamMatch.create goals: 3, points: 11, team_id: 1, match_id: 1
-TeamMatch.create goals: 1, points: 15, team_id: 2, match_id: 2
+TeamMatch.create goals: 1, points: 15, team_id: 2, match_id: 1
 TeamMatch.create goals: 2, points: 10, team_id: 3, match_id: 3
 
 Team.create name: "Duc", logo: "", coach: "Mourinho", country: "Duc"
-Team.create name: "Man city", logo: "", coach: "Belgola", country: "Tay ban nha"
+Team.create name: "Phap", logo: "", coach: "Belgola", country: "Tay ban nha"
 Team.create name: "Liverpol", logo: "", coach: "Zidan", country: "Phap"
 
 User.create email: "admin@example.com", password: "12345678", password_confirmation: "12345678", role: :admin
