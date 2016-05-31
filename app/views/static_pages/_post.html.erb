@@ -1,0 +1,34 @@
+<div id="frg-featured">
+  <div class="row">
+    <div class="col-sm-8">
+      <div class="frg-slider">
+        <div class="thumbnail">
+          <a href="#"><img src="https://placehold.it/601x360"></a>
+          <div class="caption">
+            <h4><%= link_to t "home.banner_title" %></h4>
+            <p class="frg-tag"><span><%= link_to t "home.real_madrid" %></span>
+              <span><%= link_to t "home.aletico" %></span></p>
+            <p class="frg-summary"><%= t "static_pages.title" %>
+              <%= t "home.banner_news" %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  <div class="col-sm-4">
+    <div class="panel panel-success">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= t "home.newest_news" %></h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+          <% @posts.each do |post| %>
+            <li><%= link_to post.title, post_path(post),
+              class: "fa fa-caret-right" %>
+            </li>
+            <br>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

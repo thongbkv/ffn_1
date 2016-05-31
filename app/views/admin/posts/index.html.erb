@@ -19,8 +19,8 @@
             <td class="td_style"><%= link_to post.title, admin_post_path(post) %></td>
             <td class="td_style"><%= post.content %></td>
             <td class="td_style"><%= image_tag post.image.url if post.image? %></td>
-            <td class="td_style"><%= post.season.name %></td>
-            <td class="td_style"><%= post.match.name %></td>
+            <td class="td_style"><%= post.season_name %></td>
+            <td class="td_style"><%= post.match_name %></td>
             <td class="td_style"><%= link_to t("admin.team.delete"), admin_post_path(post),
               method: :delete, data: {confirm: t("admin.team.delete_message")} %>
             </td>

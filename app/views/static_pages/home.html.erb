@@ -1,101 +1,8 @@
 <% provide :title, t("static_pages.home") %>
 <div class="row">
   <body>
-    <div id="frg-header">
-      <div id="frg-top">
-        <div class="frg-top">
-          <div class="container">
-              <div class="row">
-                <ul class="nav nav-pills pull-left">
-                  <li><%= link_to t("home.schedule") ,"#" %></li>
-                  <li><%= link_to t("home.germany") ,"#" %></li>
-                  <li><%= link_to t("home.france") ,"#" %></li>
-                  <li><%= link_to t("home.live_score") ,"#" %></li>
-                </ul>
-                <p class="pull-right"><%= t "home.ffn" %></p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div id="frg-banner">
-          <div class="frg-banner">
-            <div class="container">
-              <div class="row">
-                <div class="pull-left">
-                  <img src="images/logo-bongda24h.png">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div id="frg-menu">
-          <div class="frg-menu">
-            <div class="container">
-              <div class="row">
-                <ul class="nav navbar nav-pills">
-                  <li><i class="fa fa-home fa-lg"></i></li>
-                  <li><%= link_to t("home.hot_news") %></li>
-                  <li><%= link_to t("home.world_cup") %></li>
-                  <li><%= link_to t("home.euro") %></li>
-                  <li><%= link_to t("home.copa_american"), class: "fa fa-caret-down" %>
-                    <ul>
-                      <li><%= link_to t("home.brazil") %></li>
-                      <li><%= link_to t("home.argentina") %></li>
-                    </ul>
-                  </li>
-                  <li><%= link_to t("home.transfer") %></li>
-                  <li><%= link_to t("home.england"), class: "fa fa-caret-down" %></a>
-                    <ul>
-                      <li><%= link_to t("home.mu") %></li>
-                      <li><%= link_to t("home.chel") %></li>
-                    </ul>
-                  </li>
-                  <li><%= link_to t("home.vietnam") %></li>
-                  <li><%= link_to t("home.spain"), "#" %>
-                  </li>
-                  <li><%= link_to t("home.video") %></li>
-                  <li class="pull-right"><%= link_to t("home.on_pitch") %></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div id="frg-headline">
-          <div class="frg-headline">
-            <div class="container">
-              <div class="row">
-                <div class="col-sm-8">
-                  <div class="frg-small-title">
-                    <span><%= t "home.hot" %></span>
-                    <div>
-                    <marquee behavior="scroll" scrollamount="2" direction="left" width="580">
-                      <ul class="list-inline">
-                        <li><%= link_to t("home.germany"), class: "fa fa-circle" %></li>
-                        <li><%= link_to t("home.france"), class: "fa fa-circle" %></li>
-                        <li><%= link_to t("home.spain"), class: "fa fa-circle" %></li>
-                        <li><%= link_to t("home.vietnam"), class: "fa fa-circle" %></li>
-                        <li><%= link_to t("home.england"), class: "fa fa-circle" %></li>
-                      </ul>
-                    </marquee>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-4">
-                  <form class="form-horizontal">
-                    <div class="input-group">
-                      <input type="search" class="form-control" name="search"
-                        placeholder="<%= t("home.search") %>" id="frg-search">
-                      <span class="input-group-btn">
-                        <button class="btn btn-default btn-info" type="submit">
-                          <i class="fa fa-search"></i></button></span>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <%= render "top_header" %>
+    <%= render "post" %>
     <div id="frg-wrapper">
       <div class="container">
         <div id="frg-schedule">
@@ -141,66 +48,11 @@
                 <p><%= link_to t("home.more_football"), class: "fa fa-caret-right" %></p>
               </div>
             </div>
-            <div class="col-sm-4">
-              <div class="frg-result-rank">
-                <div class="frg-tabs">
-                  <ul>
-                    <li><%= link_to t"home.result" %></li>
-                    <li><%= link_to t"home.ranking" %></li>
-                  </ul>
-                  <div id="frg-rank">
-                    <table class="table table-hover table-bordered">
-                      <thead>
-                        <tr>
-                          <th colspan="2">
-                            <select class="form-control">
-                              <option><%= t "home.world_cup" %></option>
-                              <option><%= t "home.euro" %></option>
-                              <option><%= t "home.england" %></option>
-                              <option><%= t "home.germany" %></option>
-                              <option><%= t "home.france" %></option>
-                              <option><%= t "home.spain" %></option>
-                              <option><%= t "home.vietnam" %></option>
-                            </select>
-                          </th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <% @seasons.each do |season| %>
-                          <% season.load_season_team.each do |season_team| %>
-                            <tr>
-                              <td><%= season_team.rank %></td>
-                              <td><%= season_team.team_name %></td>
-                            </tr>
-                          <% end %>
-                        <% end %>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <%= render "left_content_ranking" %>
           </div>
         </div>
       </div>
     </div>
-    <div id="frg-footer">
-      <div class="container">
-        <div class="row">
-          <div class="frg-bottom-menu">
-            <ul class="nav navbar nav-pills">
-              <li><%= link_to t("static_pages.home") %></li>
-              <li><%= link_to t("static_pages.help") %></li>
-              <li><%= link_to t("home.contact") %></li>
-              <li><%= link_to t("home.site_map") %></li>
-              <li><%= link_to t("home.on_pitch") %></li>
-            </ul>
-          </div>
-          <div class="frg-bottom-info">
-            <h4><%= t "static_pages.title" %></h4>
-          </div>
-        </div>
-      </div>
-    </div>
+    <%= render "bottom_footer" %>
   </body>
 </div>
