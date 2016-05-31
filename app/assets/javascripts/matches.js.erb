@@ -1,0 +1,20 @@
+var matches = function(){
+  $('#match_btn').on('click', function (e) {
+    if($("#team_1 option:selected").attr('value') !=
+      $("#team_2 option:selected" ).attr('value'))
+    {
+      name = $("#team_1 option:selected").text() + " - " + 
+        $("#team_2 option:selected").text();
+      $('#match_name').val(name);
+    }
+    else
+    {
+      $('.alert').show().css({'margin-bottom': '-40px', 'margin-top': '40px'})
+        .text('<%= I18n.t("admin.match.notice"); %>');
+      e.preventDefault();
+    }
+  });
+};  
+$(document).on('ready page:change',function() {
+  matches();
+});

@@ -1,11 +1,19 @@
+<% i = 0 %>
 <%= form_for [:admin, @match] do |f| %>
   <%= render "shared/error_messages", object: @match %>
- 
-  <%= f.label :name %>
-  <%= f.text_field :name, class: "form-control" %>
+  <%= f.fields_for :team_matches, f.object.team_matches do |team_match_builder| %>
+    <%= f.label :team_id %>
+
+    <%= team_match_builder.select :team_id,
+      options_for_select(@teams.collect {|team| [team.name, team.id]},
+      selected: team_match_builder.object.team_id),
+      {}, {class: "form-control", id: "team_#{i += 1}"} %>
+  <% end %>
+
+  <%= f.hidden_field :name %>
  
   <%= f.label :description %>
-  <%= f.text_field :description, class:"form-control" %>
+  <%= f.text_area :description, class:"form-control" %>
  
   <%= f.label :start_date %>
   <%= f.text_field :start_date, class: "form-control" %>
@@ -16,7 +24,8 @@
   <%= f.label :stadium %>
   <%= f.text_field :stadium, class: "form-control" %>
 
-  <%= f.select :season_id, @seasons.collect {|season| [ season.name, season.id ]} %>
+  <%= f.select :season_id, @seasons.collect {|season| [season.name, season.id]},
+    {include_blank: false}, {class: "form-control"} %>
  
-  <%= f.submit class: "btn btn-info form-button" %>
+  <%= f.submit class: "btn btn-info form-button", id: "match_btn" %>
 <% end %>

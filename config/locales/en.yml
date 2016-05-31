@@ -84,6 +84,12 @@ en:
       edit: "Edit"
       new_match: "New match"
       list_match: "List matches"
+      notice: "Please chose differen team.!"
+    new_match: "New match"
+    list_match: "List matches"
+  shared:
+    form: "The form contains"
+    error: "Error!"
     player:
       create_player: "Create Player"
       player_name: "Player"
