@@ -22,7 +22,7 @@ gem "omniauth"
 gem "omniauth-google-oauth2"
 gem "omniauth-facebook"
 gem "social-share-button"
-
+gem "config"
 group :development, :test do
   gem "sqlite3", "1.3.9"
   gem "byebug", "3.4.0"

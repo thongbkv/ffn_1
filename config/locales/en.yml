@@ -211,3 +211,17 @@ en:
       El Cholo giống với một nhà giả kim luôn khao khát
       biến những thứ kim loại tầm thường trở thành vàng"
     banner_title: "Diego Simeone: Hãy gọi El Cholo là nhà giả kim"
+  post:
+    comment: "Compose new comment ..."
+    submit: "Post"
+  comment:
+    error: "Comment error!"
+    success: "Comment success!"
+    update_success: "Update success!"
+    update_error: "Update_error!"
+    edit: "Edit"
+    delete: "Delete"
+    says: "Said:"
+    commented: "Commented"
+    ago: "ago"
+    list_comment: "Comments:"
