@@ -48,7 +48,8 @@ class Admin::MatchesController < ApplicationController
   private
   def match_params
     params.require(:match).permit :name, :description, :start_date,
-      :hour, :stadium, :season_id, team_matches_attributes: [:id, :team_id]
+      :hour, :stadium, :season_id,
+      team_matches_attributes: [:id, :team_id, :goals, :points]
   end
 
   def load_seasons
