@@ -16,6 +16,10 @@ class Admin::TeamsController < ApplicationController
     end
   end
 
+  def show
+    @seasons =Season.all
+  end
+
   def edit
   end
 

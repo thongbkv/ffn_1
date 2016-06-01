@@ -1,0 +1,21 @@
+<%= render "static_pages/top_header" %>
+<div class="row">
+  <div class="col-md-8">
+    <div class="col-md-6">
+      <div class="tt-team-logo">
+        <%= image_tag @team.logo.url if @team.logo? %>  
+      </div>
+    </div>
+    <div class="col-md-6">
+      <h2><%= t "admin.team.detail_team" %></h2>
+      <h4><span class="label label-success"><%= (t "admin.team.name") %></span>
+        <%= @team.name %></h4>
+      <h4><span class="label label-success"><%= (t "admin.team.coach") %></span>
+        <%= @team.coach %></h4>
+      <h4><span class="label label-success"><%= (t "admin.player.country") %></span>
+        <%= @team.country %></h4>
+    </div>  
+  </div>
+  <%= render partial: "static_pages/left_content_ranking", seasons: @seasons %>
+</div>
+<%= render "static_pages/bottom_footer" %>

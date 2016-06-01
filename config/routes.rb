@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get "static_pages/help"
 
   resources :posts, only: [:index, :show]
+  resources :teams
 
   namespace :admin do
     root "seasons#index"
