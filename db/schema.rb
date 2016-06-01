@@ -55,6 +55,7 @@ ActiveRecord::Schema.define(version: 20160525084520) do
     t.string   "position"
     t.integer  "jersey_number"
     t.string   "nationality"
+    t.string   "image"
     t.integer  "team_id"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false

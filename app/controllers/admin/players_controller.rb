@@ -11,6 +11,10 @@ class Admin::PlayersController < ApplicationController
   def edit
   end
 
+  def show
+    @seasons = Season.all
+  end
+
   def create
     if @player.save
       flash.now[:success] = t "admin.player.create_success"
@@ -44,7 +48,7 @@ class Admin::PlayersController < ApplicationController
   private
   def player_params
     params.require(:player).permit :name, :date_of_birth, :position,
-      :jersey_number, :nationality, :team_id
+      :jersey_number, :nationality, :image, :team_id
   end
 
   def load_teams

@@ -30,11 +30,11 @@ Match.create name: "Man city - Liverpol", description: "Cup FA", start_date: "22
   hour: "23h10", stadium: "My Dinh3", season_id: 3
 
 Player.create name: "Player - 1", date_of_birth: "05/12/1992", position: "Thu mon",
-  jersey_number: 8, nationality: "Lao", team_id: 1
+  jersey_number: 8, nationality: "Lao", image: "",team_id: 1
 Player.create name: "Player - 2", date_of_birth: "05/11/1993", position: "Tien dao",
-  jersey_number: 18, nationality: "Thailan", team_id: 2
+  jersey_number: 18, nationality: "Thailan", image: "",team_id: 2
 Player.create name: "Player - 3", date_of_birth: "15/10/1988", position: "Hau ve",
-  jersey_number: 23, nationality: "Lao", team_id: 3
+  jersey_number: 23, nationality: "Lao", image: "",team_id: 3
 
 Reply.create content: "Reply - 1", image: "", comment_id: 1, user_id: 1
 Reply.create content: "Reply - 2", image: "", comment_id: 2, user_id: 2
