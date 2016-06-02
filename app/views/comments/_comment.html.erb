@@ -1,0 +1,12 @@
+<strong><%= comment.user_name %></strong><%= t "comment.says" %>
+</br>
+<p><%= comment.content %></p>
+<p><%= image_tag comment.image.url %></p>
+<p><%= t "comment.commented" %><%= time_ago_in_words comment.created_at %>
+  <%= t "comment.ago" %></p>
+<% if comment.is_of_user? current_user %>
+  <%= link_to t("comment.edit"), edit_comment_path(comment) %>
+  <%= link_to t("comment.delete"), comment_path(comment), method: :delete,
+    data: {confirm: t("admin.team.delete_message")} %>
+<% end %>
+<hr>

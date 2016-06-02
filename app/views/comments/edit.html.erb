@@ -1,0 +1,14 @@
+<div class="row frm-comment">
+  <div class="col-md-3 avatar">
+    <%= image_tag "logo-ffn-2.png", size: Settings.size %>
+  </div>
+  <div class="col-md-9 wrap-comment ">
+    <%= form_for @comment do |f| %>
+      <%= render "shared/error_messages", object: f.object %>
+      <%= f.hidden_field :id, value: @comment.id %>
+      <%= f.text_area :content, placeholder: t("post.comment"), id: "text_area" %>
+      <%= f.file_field :image, accept: "image/jpeg, image/gif, image/png" %>
+      <%= f.submit t("post.submit"), class: "button btn-dark-blue" %>
+    <% end %>
+  </div>
+</div>

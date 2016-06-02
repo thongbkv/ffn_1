@@ -8,6 +8,11 @@
         <p class="frg-summary"><%= @post.content %></p>
         <p class="frg-summary"><%= @post.image.url %></p>
       </div>
+      <div id="comment-list-<%= @post.id %>">
+        <h3><%= t "comment.list_comment" %></h3>
+        <%= render @post.comments %>
+      </div>
+      <%= render "comments/form" %>
     </div>
   </div>
   <%= render partial: "static_pages/left_content_ranking", seasons: @seasons %>

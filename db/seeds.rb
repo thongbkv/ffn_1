@@ -10,9 +10,9 @@ Bet.create status: :win, match_id: 1, user_id: 1
 Bet.create status: :tie, match_id: 2, user_id: 2
 Bet.create status: :fail, match_id: 3, user_id: 3
 
-Comment.create content: "Comment - 1", image: "", posts_id: 1, user_id: 1
-Comment.create content: "Comment - 2", image: "", posts_id: 1, user_id: 2
-Comment.create content: "Comment - 3", image: "", posts_id: 1, user_id: 3
+Comment.create content: "Comment - 1", image: "", post_id: 1, user_id: 1
+Comment.create content: "Comment - 2", image: "", post_id: 1, user_id: 2
+Comment.create content: "Comment - 3", image: "", post_id: 1, user_id: 3
 
 Match.create name: "Duc - Phap", description: "Tran chung ket cup C1", start_date: "11/09/2016",
   hour: "10h10", stadium: "My Dinh", season_id: 1

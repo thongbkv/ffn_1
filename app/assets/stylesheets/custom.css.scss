@@ -62,3 +62,40 @@ h1 {
   display: none;
 }
 
+.section {
+  margin-top: 30px;
+}
+
+.box-comment .frm-comment {
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #ddd;
+  background-color: #f2f2f2;
+}
+
+.box-comment .frm-comment .avatar {
+  float: left;
+}
+
+.box-comment .frm-comment .wrap-comment {
+  margin-left: 100px;
+  overflow: hidden;
+}
+
+.box-comment .frm-comment .wrap-comment #text_area {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #dedede;
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+.button .btn-dark-blue {
+  background: #721799;
+  font-size: 14px;
+}
+
+#text_area {
+  width: 450px;
+  height: 80px;
+}

@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :posts, only: [:index, :show]
   resources :teams
   resources :players
+  resources :comments
 
   namespace :admin do
     root "seasons#index"
