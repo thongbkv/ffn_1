@@ -225,3 +225,10 @@ en:
     commented: "Commented"
     ago: "ago"
     list_comment: "Comments:"
+    banner_news: "Diego Simeone chẳng phải vua Midas"
+  mailer:
+    notifier: "Edu-Football-News Notifier"
+    hi: "Hi"
+    sys_send_notice: "Sigup success!"
+    go_to_check: "Please, go to Edu-Football-News-System"
+    edu_football_news_sys: "Edu-Football-News-System"
