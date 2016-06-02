@@ -162,11 +162,11 @@ en:
       form: "The form contains"
   user:
     team:
-      list_team: "List Team"   
+      list_team: "List Team"
       name: "Name"
       logo: "Logo"
       coach: "Coach"
-      country: "Country" 
+      country: "Country"
       detail_team: "Team Detail"
   home:
     schedule: "Schedule"
@@ -232,3 +232,5 @@ en:
     sys_send_notice: "Sigup success!"
     go_to_check: "Please, go to Edu-Football-News-System"
     edu_football_news_sys: "Edu-Football-News-System"
+    bet:
+      betted_success: "Betted success!"
