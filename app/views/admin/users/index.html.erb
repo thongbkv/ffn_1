@@ -1,3 +1,10 @@
+<div class="search">
+  <%= search_form_for [:admin, @q] do |f| %>
+    <%= f.text_field :email_cont, class: "form-control input-sm",
+      placeholder: t("view.key_word") %>
+    <%= f.button t("view.search"), class: "btn btn-primary btn-sm" %>
+  <% end %> 
+</div>
 <div class="row">
   <div class="col-md-10 col-offset-2">
     <h2><%= t "admin.user.list_user" %></h2>

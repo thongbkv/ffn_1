@@ -2,6 +2,8 @@ class Admin::UsersController < ApplicationController
   load_and_authorize_resource
 
   def index
+    @q = User.search params[:q]
+    @users = @q.result distinct: true
   end
 
   def show

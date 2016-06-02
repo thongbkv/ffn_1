@@ -5,6 +5,8 @@ class Admin::MatchesController < ApplicationController
   before_action :load_team_matches
   
   def index
+    @q = Match.search params[:q]
+    @matches = @q.result distinct: true
   end
 
   def new

@@ -1,0 +1,7 @@
+<div class="search">
+  <%= search_form_for [:admin, @q] do |f| %>
+    <%= f.text_field :name_cont, class: "form-control input-sm",
+      placeholder: t("view.key_word") %>
+    <%= f.button t("view.search"), class: "btn btn-primary btn-sm" %>
+  <% end %> 
+</div>
