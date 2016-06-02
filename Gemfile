@@ -21,6 +21,8 @@ gem "cancancan", "~> 1.10"
 gem "omniauth"
 gem "omniauth-google-oauth2"
 gem "omniauth-facebook"
+gem "social-share-button"
+
 group :development, :test do
   gem "sqlite3", "1.3.9"
   gem "byebug", "3.4.0"

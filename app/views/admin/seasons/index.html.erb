@@ -15,7 +15,7 @@
       <tbody>
         <% @seasons.each do |season| %>
           <tr>
-            <td><%= season.name %></td>
+            <td><%= link_to season.name, admin_season_path(season) %></td>
             <td><%= season.description %></td>
             <td><%= season.season_teams.count %></td>
             <td><%= season.matches.count %></td>
