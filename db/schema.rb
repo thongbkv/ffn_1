@@ -14,7 +14,6 @@
 ActiveRecord::Schema.define(version: 20160525084520) do
 
   create_table "bets", force: :cascade do |t|
-    t.integer  "status"
     t.integer  "team_id"
     t.integer  "match_id"
     t.integer  "user_id"

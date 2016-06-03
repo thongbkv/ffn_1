@@ -6,9 +6,9 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Bet.create status: :win, match_id: 1, user_id: 1
-Bet.create status: :tie, match_id: 2, user_id: 2
-Bet.create status: :fail, match_id: 3, user_id: 3
+Bet.create  match_id: 1, user_id: 1
+Bet.create  match_id: 2, user_id: 2
+Bet.create  match_id: 3, user_id: 3
 
 Comment.create content: "Comment - 1", image: "", post_id: 1, user_id: 1
 Comment.create content: "Comment - 2", image: "", post_id: 1, user_id: 2

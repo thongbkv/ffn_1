@@ -7,16 +7,15 @@
         <div class="panel panel-info form-style">
           <span class="font"><%= team_match.team.name %></span><br/>
           <%= image_tag team_match.team.logo, {class: "image_small"} %>
-        </div>  
+        </div>
       </div>
     <% end %>
   <div class="raido_button">
     <% @match.team_matches.each do |team_match| %>
-      <%= radio_button_tag "bet[team_id]", team_match.team_id,
-        @bet.is_win_of_team? team_match.team.id %>
+      <%= radio_button_tag "bet[team_id]", team_match.team_id %>
       <%= label_tag team_match.team_name %>
-    <% end %> 
-    <%= radio_button_tag "bet[team_id]", "-1", @bet.is_win_of_team? -1 %>
+    <% end %>
+    <%= radio_button_tag "bet[team_id]", "-1" %>
     <%= label_tag t "home.draw" %>
   </div>
 
