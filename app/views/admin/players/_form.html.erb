@@ -1,6 +1,6 @@
 <%= form_for [:admin, @player] do |f| %>
   <%= render "shared/error_messages", object: @player %>
-  
+
   <%= f.label :name %>
   <%= f.text_field :name, class: "form-control" %>
 
@@ -19,7 +19,9 @@
   <%= f.label :image %>
   <%= f.file_field :image, accept: "image/jpeg, image/gif, image/png" %>
 
-  <%= f.select :team_id, @teams.collect {|team| [ team.name, team.id ]} %>
+  <%= f.label :team %>
+  <%= f.select :team_id, @teams.collect {|team| [ team.name, team.id ]},
+    {include_blank: false}, {class: "form-control"} %>
 
   <%= f.submit class: "btn btn-primary" %>
 <% end %>

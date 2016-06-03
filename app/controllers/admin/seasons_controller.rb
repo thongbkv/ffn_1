@@ -17,7 +17,7 @@ class Admin::SeasonsController < ApplicationController
       flash.now[:success] = t "admin.season.create_success"
       redirect_to admin_seasons_path
     else
-      flash[:warning] = t "admin.season.wrong" 
+      flash[:warning] = t "admin.season.wrong"
       render :new
     end
   end
@@ -26,7 +26,7 @@ class Admin::SeasonsController < ApplicationController
     if @season.update_attributes season_params
       flash[:success] = t "admin.season.update_season_success"
       respond_to do |format|
-        format.html {redirect_to :back}
+        format.html {redirect_to admin_seasons_path}
         format.js
       end
     else

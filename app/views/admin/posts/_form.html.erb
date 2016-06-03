@@ -5,7 +5,7 @@
   <%= f.text_field :title, class: "form-control" %>
 
   <%= f.label :content %>
-  <%= f.text_field :content, class: "form-control" %>
+  <%= f.text_area :content, class: "form-control" %>
 
   <%= f.label :image %>
   <%= f.file_field :image, accept: "image/jpeg, image/gif, image/png" %>
@@ -18,5 +18,6 @@
   <%= f.select :match_id, @matches.collect {|match| [match.name, match.id]},
     {include_blank: false}, {class: "form-control"} %>
 
-  <%= f.submit t("admin.post.create_post"), class: "btn btn-info form-button" %>
+  <%= f.submit t("admin.post.create_post"), class: "btn btn-info form-button",
+    id: "btn-submit" %>
 <% end %>

@@ -40,7 +40,7 @@ h1 {
     margin-top: 70px;
     font-size: 4em;
     color: red;
-  } 
+  }
 }
 
 .table-style {
@@ -114,7 +114,7 @@ h1 {
 }
 
 #test > div:nth-child(1) {
-  padding-right: 60px;  
+  padding-right: 60px;
 }
 
 #test > div:nth-child(2) {
@@ -164,10 +164,29 @@ h1 {
   margin-left: 0px;
 }
 
-.btn {
+#btn-submit {
   height: 30px;
-  position: absolute;
-  right: 0;
-  top: 5px;
+  margin: 10px auto;
   border-radius:1px;
 }
+
+#btn-search {
+  position: absolute;
+  right: -50px;
+  top: 5px;
+}
+
+button.btn.btn-primary.btn-sm {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+#user_search {
+  position: relative;
+}
+
+input.btn.btn-info.form-button {
+  margin: 10px auto;
+}
+
