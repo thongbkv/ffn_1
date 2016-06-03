@@ -3,11 +3,17 @@ Rails.application.routes.draw do
 
   root "static_pages#home"
   get "static_pages/help"
-
+  
   resources :posts, only: [:index, :show]
   resources :teams
   resources :players
   resources :comments
+
+  resources :bets, only: [:edit, :update]
+  
+  resources :matches do 
+    resources :bets, except: [:destroy, :show, :index]
+  end
 
   namespace :admin do
     root "seasons#index"

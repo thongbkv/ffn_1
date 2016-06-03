@@ -1,0 +1,25 @@
+<% provide :button_text, t("admin.match.create_match") %>
+<% provide :title, t("admin.match.match") %>
+
+<%= form_for @bet, html: {id: "bet_form"} do |f| %>
+  <div class="row" id="test">
+    <% @bet.match.team_matches.each do |team_match| %>
+      <div class="col-md-6">
+        <div class="panel panel-info form-style">
+          <span class="font"><%= team_match.team.name %></span><br/>
+          <%= image_tag team_match.team.logo, {class: "image_small"} %>
+        </div>  
+      </div>
+    <% end %>
+    <div class="raido_button">
+    <% @bet.match.team_matches.each do |team_match| %>
+      <%= radio_button_tag "bet[team_id]", team_match.team_id,
+        @bet.is_win_of_team?(team_match.team.id) %>
+      <%= label_tag team_match.team_name %>
+    <% end %> 
+    <%= radio_button_tag "bet[team_id]", "-1", @bet.is_win_of_team?(-1) %>
+    <%= label_tag t "home.draw" %>
+  </div>
+  </div>
+  <%= f.submit class: "btn btn-info form-button" %>
+<% end %>

@@ -25,13 +25,20 @@
                       <tbody>
                       <% season.load_matches.each do |hash_match| %>
                         <tr>
-                          <td colspan="5"><strong class="text-info">
-                            <%= hash_match.first %></strong></td>
+                          <td colspan="5">
+                            <strong class="text-info"><%= hash_match.first %></strong>
+                          </td>
                         </tr>
                         <% hash_match.second.each do |match| %>
                           <tr>
                             <td><i class="fa fa-tv"></i><%= match.hour %></td>
-                            <td><%= match.name %><span></td>
+                            <% if match.exist_bet? current_user %>
+                              <td class="td_style">
+                                <%= link_to match.name, edit_bet_path(match.load_bet(current_user)) %>
+                              </td>
+                            <% else %>
+                              <td class="td_style"><%= link_to match.name, new_match_bet_path(match) %></td>
+                            <% end %>
                             <td>
                               <%= match.goals %>
                             </td>
