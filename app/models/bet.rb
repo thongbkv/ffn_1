@@ -14,4 +14,7 @@ class Bet < ActiveRecord::Base
     admin = User.admin.first
     SendEmailWorker.perform_async self.id, admin.id, self.user_id
   end
+  def is_win_of_team? team_id
+    self.team_id == team_id
+  end
 end

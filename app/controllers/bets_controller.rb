@@ -1,7 +1,7 @@
 class BetsController < ApplicationController
   load_and_authorize_resource :match, except: [:edit, :update]
   load_and_authorize_resource
-  
+  before_action :load_seasons, only: [:new, :edit]
   def new
   end
 
@@ -32,5 +32,9 @@ class BetsController < ApplicationController
   private
   def bet_params
     params.require(:bet).permit :team_id
+  end
+
+  def load_seasons
+    @seasons = Season.all
   end
 end
