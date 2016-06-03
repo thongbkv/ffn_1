@@ -157,6 +157,8 @@ en:
     login: "Login"
     signup: "Sign Up"
   view:
+    search: "Search"
+    key_word: "Key Word"
     shared:
       error: "Error!"
       form: "The form contains"

@@ -24,6 +24,8 @@ gem "omniauth-facebook"
 gem "social-share-button"
 gem "config"
 gem "sidekiq"
+gem "ransack"
+
 group :development, :test do
   gem "sqlite3", "1.3.9"
   gem "byebug", "3.4.0"

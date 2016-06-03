@@ -1,6 +1,8 @@
+<%= render "layouts/search" %>
 <div class="row">
   <div class="col-md-10 col-offset-2">
     <h2><%= t "admin.list_team" %></h2>
+  </div>
     <p class="pull-right label label-info"><%= link_to t("admin.new_team"),
       new_admin_team_path %></p>
     <table class="table table-striped table-hover table-style">
@@ -12,7 +14,7 @@
         <th></th>
         <th></th>
       </thead>
-      <tbody>
+      <tbody> 
         <% @teams.each do |team| %>
           <tr>
             <td class="td_style"><%= link_to team.name, admin_team_path(team) %></td>
@@ -27,5 +29,4 @@
         <% end %>
       </tbody>
     </table>
-  </div>
 </div>

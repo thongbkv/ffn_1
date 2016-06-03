@@ -3,6 +3,8 @@ class Admin::PlayersController < ApplicationController
   before_action :load_teams, only: [:new, :edit]
 
   def index
+    @q = Player.search params[:q]
+    @players = @q.result distinct: true
   end
 
   def new

@@ -2,6 +2,8 @@ class Admin::TeamsController < ApplicationController
   load_and_authorize_resource
 
   def index
+    @q = Team.search params[:q]
+    @teams = @q.result distinct: true
   end
 
   def new

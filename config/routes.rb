@@ -8,7 +8,6 @@ Rails.application.routes.draw do
   resources :teams
   resources :players
   resources :comments
-
   resources :bets, only: [:edit, :update]
   
   resources :matches do 
@@ -16,7 +15,7 @@ Rails.application.routes.draw do
   end
 
   namespace :admin do
-    root "seasons#index"
+    root "seasons#show"
     resources :seasons
     resources :matches
     resources :players

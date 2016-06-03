@@ -2,6 +2,8 @@ class Admin::SeasonsController < ApplicationController
   load_and_authorize_resource
 
   def index
+    @q = Season.search params[:q]
+    @seasons = @q.result distinct: true
   end
 
   def new
