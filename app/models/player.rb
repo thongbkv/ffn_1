@@ -7,5 +7,5 @@ class Player < ActiveRecord::Base
   validates :jersey_number, presence: true,
     numericality: {only_integer: true, greater_than: 0}
 
-  mount_uploader :image, LogoUploader  
+  mount_uploader :image, LogoUploader
 end
