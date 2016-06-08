@@ -34,7 +34,8 @@ group :development, :test do
   gem "letter_opener"
   gem "rspec-rails", "~> 3.4"
   gem "capybara", "~> 2.5"
-  gem "factory_girl_rails", "~> 4.5.0"
+  gem "factory_girl_rails"
+  gem "simplecov", require: false
 end
 
 group :test do
